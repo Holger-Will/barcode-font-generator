@@ -2,11 +2,15 @@
 
 The Code-128 Fonts i found on the internet had no Start/Stop Codes or where generally broken. So i created this repository. It contains code 128 fonts in .svg, .ttf and .woff format.
 
-* fonts/code128.svg
-* fonts/code128.ttf
-* fonts/code128.woff
+The fonts are available in 5 different Sizes: S,M,L,XL,XXL. They differ in height vs. width ratio.
 
-the font name is "code128".
+* fonts/code128_S(.svg, .ttf, .woff)
+* fonts/code128(.svg, .ttf, .woff)
+* fonts/code128_L(.svg, .ttf, .woff)
+* fonts/code128_XL(.svg, .ttf, .woff)
+* fonts/code128_XXL(.svg, .ttf, .woff)
+
+
 In CSS you can use it like this for example:
 
     @font-face { font-family: 'code128'; src: url('../fonts/code128.ttf'); }
@@ -22,11 +26,16 @@ Details can be found under [Generate Codes](#generating-codes)
 
 # Tools and Information
 
-the genearl information and code table was taken from the Wikipedia Article on [Code 128](https://en.wikipedia.org/wiki/Code_128)
+the general information and code table was taken from the Wikipedia Article on [Code 128](https://en.wikipedia.org/wiki/Code_128)
 The code table is then turned to .json, and the .json into an .svg font.
 I used the ecxellent tools [svg2ttf](https://github.com/fontello/svg2ttf) and [ttf2woff](https://github.com/fontello/ttf2woff) by [fontello](https://github.com/fontello) to convert the font to ttf and woff.
 
 And the fantastic [font dragr](http://labs.thecssninja.com/font_dragr/) by Ryan Seddon for initial testing.
+
+In the root folder there is a bash script called generate which you can use to regenerate all fonts (in case you want to specify your own hight to width ratio)
+
+see font in action in the [Live Exmaple](https://rawgit.com/Holger-Will/code128/master/examples/generator.html)
+
 
 # Code Table
 
