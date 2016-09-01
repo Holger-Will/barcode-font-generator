@@ -34,7 +34,7 @@ And the fantastic [font dragr](http://labs.thecssninja.com/font_dragr/) by Ryan 
 
 In the root folder there is a bash script called generate which you can use to regenerate all fonts (in case you want to specify your own hight to width ratio)
 
-see font in action in the [Live Example](https://cdn.rawgit.com/Holger-Will/code128/master/examples/generator.html)
+see the font in action in the [Live Example](https://cdn.rawgit.com/Holger-Will/code128/master/examples/generator.html)
 
 
 # Code Table
