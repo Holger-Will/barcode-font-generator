@@ -1,3 +1,24 @@
+
+var size = process.argv[2]
+console.log(size)
+var h = 2200
+switch(size){
+  case "S":
+    h = 1100
+  break
+  case "M":
+    h = 2200
+  break
+  case "L":
+    h = 3300
+  break
+  case "XL":
+    h = 4400
+  break
+  case "XXL":
+    h = 5500
+  break
+}
 const codes=require("./code_table.json").codes
 console.log(
 `<svg xmlns="http://www.w3.org/2000/svg">
@@ -7,10 +28,10 @@ console.log(
         vert-origin-y = "0" >
     <font-face font-family  = "code128"
                font-weight  = "normal"
-               units-per-em = "2200"
-               cap-height   = "2200"
-               x-height     = "2200"
-               bbox         = "0 0 2200 2200">
+               units-per-em = "${h}"
+               cap-height   = "${h}"
+               x-height     = "${h}"
+               bbox         = "0 0 ${h} ${h}">
       <font-face-src>
         <font-face-name name="code128"/>
       </font-face-src>
@@ -24,7 +45,7 @@ codes.forEach(function(item,index){
     var w   = parseInt( item.weights[i] )
     offset += w*1
     if ( i%2 == 0 ) {
-      st += ` h ${w*100} V 2200 h ${-w*100} z`
+      st += ` h ${w*100} V ${h} h ${-w*100} z`
     } else {
       st += ` M ${offset*100}, 0`
     }

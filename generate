@@ -1,5 +1,19 @@
 #!/bin/bash
 
+node tools/toSVG.js S > fonts/code128_S.svg
 node tools/toSVG.js > fonts/code128.svg
+node tools/toSVG.js L > fonts/code128_L.svg
+node tools/toSVG.js XL > fonts/code128_XL.svg
+node tools/toSVG.js XXL > fonts/code128_XXL.svg
+
+svg2ttf fonts/code128_S.svg fonts/code128_S.ttf
 svg2ttf fonts/code128.svg fonts/code128.ttf
+svg2ttf fonts/code128_L.svg fonts/code128_L.ttf
+svg2ttf fonts/code128_XL.svg fonts/code128_XL.ttf
+svg2ttf fonts/code128_XXL.svg fonts/code128_XXL.ttf
+
+ttf2woff fonts/code128_S.ttf fonts/code128_S.woff
 ttf2woff fonts/code128.ttf fonts/code128.woff
+ttf2woff fonts/code128_L.ttf fonts/code128_L.woff
+ttf2woff fonts/code128_XL.ttf fonts/code128_XL.woff
+ttf2woff fonts/code128_XXL.ttf fonts/code128_XXL.woff
