@@ -1,5 +1,5 @@
 ## code 128
-this repository contains code 128 fonts in .svg .ttf and .woff format.
+this repository contains code 128 fonts in .svg, .ttf and .woff format.
 
 * fonts/code128.svg
 * fonts/code128.ttf
@@ -10,6 +10,10 @@ In CSS you can use it like this for example:
 
     @font-face { src: url(code128.woff); }
     .barcode { font-family: code128; }
+
+and in your .html:
+
+    <span class="barcode">abcde</span>
 
 you can not scan code that you output like this. Details can be found under [Generate Codes](#generate-codes)
 
