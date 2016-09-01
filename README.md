@@ -9,8 +9,8 @@ The Code-128 Fonts i found on the internet had no Start/Stop Codes or where gene
 the font name is "code128".
 In CSS you can use it like this for example:
 
-    @font-face { src: url(code128.woff); }
-    .barcode { font-family: code128; }
+    @font-face { font-family: 'code128'; src: url('../fonts/code128.ttf'); }
+    .barcode { font-family: code128; font-size:50px }
 
 and in your .html:
 
@@ -25,6 +25,8 @@ Details can be found under [Generate Codes](#generate-codes)
 the genearl information and code table was taken from the Wikipedia Article on [Code 128](https://en.wikipedia.org/wiki/Code_128)
 The code table is then turned to .json, and the .json into an .svg font.
 I used the ecxellent tools [svg2ttf](https://github.com/fontello/svg2ttf) and [ttf2woff](https://github.com/fontello/ttf2woff) by [fontello](https://github.com/fontello) to convert the font to ttf and woff.
+
+And the fantastic [font dragr](http://labs.thecssninja.com/font_dragr/) by Ryan Seddon for initial testing.
 
 # Code Table
 
