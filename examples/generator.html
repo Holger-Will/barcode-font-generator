@@ -5,7 +5,7 @@
     <title>Testing the Code 128 Font</title>
     <style type="text/css">
       @font-face { font-family: 'code128'; src: url('../fonts/code128.woff'); }
-      .barcode { font-family: code128; font-size:50px; padding:5px}
+      .barcode { font-family: code128; font-size:30px; padding:5px}
       .barcode_container{display:flex;flex-direction:column;align-items: center;width:500px}
     </style>
     <script>
@@ -144,7 +144,7 @@
 
       function change(){
         var txt = document.getElementById("txt").value
-        var tmp = "Ð" + txt
+        var tmp = "Ñ" + txt
         tmp += String.fromCharCode(getASCIIFromCode(getChecksum(tmp)))
         tmp += "Ó"
         document.getElementById("outtxt").innerHTML=txt
