@@ -159,3 +159,4 @@ you can generate working scannable codes with the help of tools/generator.js
     var code = generator.getCode(txt)
 
 the result is an ascii code, that when rendered with a code 128 Font will display a scannable  Code-128 Code.
+please be aware that this is not a full blown encoder. It uses standard Code B encodings (see code table). No optimizations will be performed.
