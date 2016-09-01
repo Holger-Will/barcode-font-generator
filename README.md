@@ -15,7 +15,9 @@ and in your .html:
 
     <span class="barcode">abcde</span>
 
-you can not scan code that you output like this. Details can be found under [Generate Codes](#generate-codes)
+**You can not scan code that you output like this!**
+
+Details can be found under [Generate Codes](#generate-codes)
 
 # Tools and Information
 
