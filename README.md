@@ -18,7 +18,7 @@ and in your .html:
 
 **You can not scan code that you output like this!**
 
-Details can be found under [Generate Codes](#generate-codes)
+Details can be found under [Generate Codes](#generating-codes)
 
 # Tools and Information
 
@@ -141,4 +141,4 @@ And the fantastic [font dragr](http://labs.thecssninja.com/font_dragr/) by Ryan 
 | 106 | Stop (7 bars/spaces) |  |  | 211,251 | Ó | 1100011101011 | 2331112 |
 
 
-# Generate Codes
+# Generating Codes
