@@ -5,7 +5,15 @@
     <title>Testing the Code 128 Font</title>
     <style type="text/css">
       @font-face { font-family: 'code128'; src: url('../fonts/code128.woff'); }
+      @font-face { font-family: 'code128_S'; src: url('../fonts/code128_S.woff'); }
+      @font-face { font-family: 'code128_L'; src: url('../fonts/code128_L.woff'); }
+      @font-face { font-family: 'code128_XL'; src: url('../fonts/code128_XL.woff'); }
+      @font-face { font-family: 'code128_XXL'; src: url('../fonts/code128_XXL.woff'); }
       .barcode { font-family: code128; font-size:30px; padding:5px}
+      .barcodeS { font-family: code128_S; font-size:15px; padding:5px}
+      .barcodeL { font-family: code128_L; font-size:45px; padding:5px}
+      .barcodeXL { font-family: code128_XL; font-size:60px; padding:5px}
+      .barcodeXXL { font-family: code128_XXL; font-size:75px; padding:5px}
       .barcode_container{display:flex;flex-direction:column;align-items: center;width:500px}
     </style>
     <script>
@@ -149,6 +157,10 @@
         tmp += "Ó"
         document.getElementById("outtxt").innerHTML=txt
         document.getElementById("out").innerHTML=tmp
+        document.getElementById("outS").innerHTML=tmp
+        document.getElementById("outL").innerHTML=tmp
+        document.getElementById("outXL").innerHTML=tmp
+        document.getElementById("outXXL").innerHTML=tmp
         document.getElementById("outraw").innerHTML=tmp
       }
     </script>
@@ -157,7 +169,11 @@
     <h2>Testing the Code 128 Font</h2>
     <div class="barcode_container">
       <div><input type="text" id="txt" placeholder="type some text" onkeyup="change()"/></div>
+      <div id="outS" class="barcodeS"></div>
       <div id="out" class="barcode"></div>
+      <div id="outL" class="barcodeL"></div>
+      <div id="outXL" class="barcodeXL"></div>
+      <div id="outXXL" class="barcodeXXL"></div>
       <div id="outtxt"></div>
       <div id="outraw"></div>
     </div>
