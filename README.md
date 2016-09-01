@@ -1,8 +1,29 @@
-## code128
+## code 128
+this repository contains code 128 fonts in .svg .ttf and .woff format.
+
+* fonts/code128.svg
+* fonts/code128.ttf
+* fonts/code128.woff
+
+the font name is "code128".
+In CSS you can use it like this for example:
+
+    @font-face { src: url(code128.woff); }
+    .barcode { font-family: code128; }
+
+you can not scan code that you output like this. Details can be found under [Generate Codes](#generate-codes)
+
+# Tools and Information
+
+the genearl information and code table was taken from the Wikipedia Article on [Code 128](https://en.wikipedia.org/wiki/Code_128)
+The code table is then turned to .json, and the .json into an .svg font.
+I used the ecxellent tools [svg2ttf](https://github.com/fontello/svg2ttf) and [ttf2woff](https://github.com/fontello/ttf2woff) by [fontello](https://github.com/fontello) to convert the font to ttf and woff.
+
+# Code Table
 
 | Code | A | B | C | ASCII | Bars and Spaces | Weights |
 | --- | --- | --- | --- | --- | --- | --- |
-| 0 |   |   | 00 | 32,212,252 | 11011001100 | 212222 |
+| 0 | SPACE | SPACE | 00 | 32,212,252 | 11011001100 | 212222 |
 | 1 | ! | ! | 01 | 33 | 11001101100 | 222122 |
 | 2 | " | " | 02 | 34 | 11001100110 | 222221 |
 | 3 | # | # | 03 | 35 | 10010011000 | 121223 |
@@ -66,7 +87,7 @@
 | 61 | ] | ] | 61 | 93 | 11001000010 | 221411 |
 | 62 | ^ | ^ | 62 | 94 | 11110001010 | 431111 |
 | 63 | _ | _ | 63 | 95 | 10100110000 | 111224 |
-| 64 |  | ` | 64 | 96 | 10100001100 | 111422 |
+| 64 | NUL | ` | 64 | 96 | 10100001100 | 111422 |
 | 65 | SOH | a | 65 | 97 | 10010110000 | 121124 |
 | 66 | STX | b | 66 | 98 | 10010000110 | 121421 |
 | 67 | ETX | c | 67 | 99 | 10000101100 | 141122 |
@@ -109,3 +130,5 @@
 | 104 | Start Code B |  |  | 209,249 | 11010010000 | 211214 |
 | 105 | Start Code C |  |  | 210,250 | 11010011100 | 211232 |
 | 106 | Stop (7 bars/spaces) | undefined | undefined | 211,251 | 1100011101011 | 2331112 |
+
+# Generate Codes
