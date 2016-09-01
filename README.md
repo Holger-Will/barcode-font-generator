@@ -152,3 +152,10 @@ see the font in action in the [Live Example](https://cdn.rawgit.com/Holger-Will/
 
 
 # Generating Codes
+
+you can generate working scannable codes with the help of tools/generator.js
+
+    var generator = new Code128Generator()
+    var code = generator.getCode(txt)
+
+the result is an ascii code, that when rendered with a code 128 Font will display a scannable  Code-128 Code.
