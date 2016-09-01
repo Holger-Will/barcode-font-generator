@@ -106,5 +106,5 @@
 {"code":103, "A":"Start Code A", "ascii":[208,248], "bars":"11010000100" ,"weights":"211412"},
 {"code":104, "A":"Start Code B", "ascii":[209,249], "bars":"11010010000" ,"weights":"211214"},
 {"code":105, "A":"Start Code C", "ascii":[210,250], "bars":"11010011100" ,"weights":"211232"},
-{"code":106, "A":"Stop (7 bars/spaces)", "ascii":[211,251], "bars":"1100011101011" ,"wheights":"2331112"}
+{"code":106, "A":"Stop (7 bars/spaces)", "ascii":[211,251], "bars":"1100011101011" ,"weights":"2331112"}
 ]}
