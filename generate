@@ -1,4 +1,5 @@
 #!/bin/bash
 
-node toSVG.js > ../src/code128.svg
-svg2ttf ../src/code128.svg ../code128.ttf
+node toSVG.js > ../fonts/code128.svg
+svg2ttf ../fonts/code128.svg ../fonts/code128.ttf
+ttf2woff ../fonts/code128.ttf ../fonts/code128.woff
