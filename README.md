@@ -1,5 +1,6 @@
 ## code 128
-this repository contains code 128 fonts in .svg, .ttf and .woff format.
+
+The Code-128 Fonts i found on the internet had no Start/Stop Codes or where generally broken. So i created this repository. It contains code 128 fonts in .svg, .ttf and .woff format.
 
 * fonts/code128.svg
 * fonts/code128.ttf
