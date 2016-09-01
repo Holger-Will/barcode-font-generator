@@ -10,6 +10,7 @@ The fonts are available in 5 different Sizes: S,M,L,XL,XXL. They differ in heigh
 * fonts/code128_XL(.svg, .ttf, .woff)
 * fonts/code128_XXL(.svg, .ttf, .woff)
 
+see the font in action in the [Live Example](https://cdn.rawgit.com/Holger-Will/code128/master/examples/generator.html)
 
 In CSS you can use it like this for example:
 
