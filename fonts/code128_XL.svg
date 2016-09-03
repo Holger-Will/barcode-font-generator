@@ -1,17 +1,17 @@
 XL
 <svg xmlns="http://www.w3.org/2000/svg">
-  <font id = "code128"
+  <font id = "code128_XL"
         horiz-adv-x   = "1100"
         vert-origin-x = "0"
         vert-origin-y = "0" >
-    <font-face font-family  = "code128"
+    <font-face font-family  = "code128_XL"
                font-weight  = "normal"
                units-per-em = "4400"
                cap-height   = "4400"
                x-height     = "4400"
                bbox         = "0 0 4400 4400">
       <font-face-src>
-        <font-face-name name="code128"/>
+        <font-face-name name="code128__XL"/>
       </font-face-src>
     </font-face>
     <glyph unicode = "&#32;"  d = "M 0, 0 h 200 V 4400 h -200 z M 300, 0 h 200 V 4400 h -200 z M 700, 0 h 200 V 4400 h -200 z M 1100, 0" />

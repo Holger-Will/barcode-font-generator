@@ -1,17 +1,17 @@
 L
 <svg xmlns="http://www.w3.org/2000/svg">
-  <font id = "code128"
+  <font id = "code128_L"
         horiz-adv-x   = "1100"
         vert-origin-x = "0"
         vert-origin-y = "0" >
-    <font-face font-family  = "code128"
+    <font-face font-family  = "code128_L"
                font-weight  = "normal"
                units-per-em = "3300"
                cap-height   = "3300"
                x-height     = "3300"
                bbox         = "0 0 3300 3300">
       <font-face-src>
-        <font-face-name name="code128"/>
+        <font-face-name name="code128__L"/>
       </font-face-src>
     </font-face>
     <glyph unicode = "&#32;"  d = "M 0, 0 h 200 V 3300 h -200 z M 300, 0 h 200 V 3300 h -200 z M 700, 0 h 200 V 3300 h -200 z M 1100, 0" />

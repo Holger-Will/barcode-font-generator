@@ -2,38 +2,44 @@
 var size = process.argv[2]
 console.log(size)
 var h = 2200
+var postfix = ""
 switch(size){
   case "S":
     h = 1100
+    postfix="_"+size
   break
   case "M":
     h = 2200
+    postfix="_"+size
   break
   case "L":
     h = 3300
+    postfix="_"+size
   break
   case "XL":
     h = 4400
+    postfix="_"+size
   break
   case "XXL":
     h = 5500
+    postfix="_"+size
   break
 }
 const codes=require("./code_table.json").codes
 console.log(
 `<svg xmlns="http://www.w3.org/2000/svg">
-  <font id = "code128"
+  <font id = "code128${postfix}"
         horiz-adv-x   = "1100"
         vert-origin-x = "0"
         vert-origin-y = "0" >
-    <font-face font-family  = "code128"
+    <font-face font-family  = "code128${postfix}"
                font-weight  = "normal"
                units-per-em = "${h}"
                cap-height   = "${h}"
                x-height     = "${h}"
                bbox         = "0 0 ${h} ${h}">
       <font-face-src>
-        <font-face-name name="code128"/>
+        <font-face-name name="code128_${postfix}"/>
       </font-face-src>
     </font-face>`
 )

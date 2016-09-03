@@ -11,7 +11,7 @@ undefined
                x-height     = "2200"
                bbox         = "0 0 2200 2200">
       <font-face-src>
-        <font-face-name name="code128"/>
+        <font-face-name name="code128_"/>
       </font-face-src>
     </font-face>
     <glyph unicode = "&#32;"  d = "M 0, 0 h 200 V 2200 h -200 z M 300, 0 h 200 V 2200 h -200 z M 700, 0 h 200 V 2200 h -200 z M 1100, 0" />
