@@ -1,5 +1,7 @@
 "use strict";
 var svg2ttf = require("svg2ttf")
+var ttf2woff= require("ttf2woff")
+var ttf2eot = require("ttf2eot")
 var fs = require('fs');
 (function() {
   var root = this
@@ -65,8 +67,63 @@ function BarcodeGenerator(){
     })
     svg+=`</font></svg>`
     var ttf = svg2ttf(svg,{})
-    fs.writeFileSync(info.output, new Buffer(ttf.buffer));
+    if(!fs.existsSync(info.output)) fs.mkdirSync(info.output)
+    fs.writeFileSync(info.output+"/"+info.name+".svg", svg);
+    fs.writeFileSync(info.output+"/"+info.name+".ttf", new Buffer(ttf.buffer));
+    var woff = ttf2woff(ttf.buffer,{})
+    fs.writeFileSync(info.output+"/"+info.name+".woff", new Buffer(woff.buffer));
+    var woff = ttf2eot(ttf.buffer,{})
+    fs.writeFileSync(info.output+"/"+info.name+".eot", new Buffer(woff.buffer));
+    var testtext=""
+    var testtextenc=""
+    if(info.code == "code39") {
+      testtext="*ABC1234*"
+      testtextenc = "*ABC1234*"
+    }
+    if(info.code == "2of5") {
+      testtext="1234567890"
+      testtextenc = ":1234567890;"
+    }
+    if(info.code == "code128") {
+      testtext="Test"
+      testtextenc = "ÑTestWÓ"
+    }
+
+    var html=`<!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>${info.name} Test Page</title>
+        <style>
+          @font-face { font-family: '${info.name}'; src: url('./${info.name}.woff'); }
+          .barcodeS { font-family: '${info.name}'; font-size:${info.height}px } /* 1 bar is 1px whide */
+          .barcodeM { font-family: '${info.name}'; font-size:${info.height*2}px } /* 2 bar is 1px whide */
+          .barcodeL { font-family: '${info.name}'; font-size:${info.height*3}px } /* 3 bar is 1px whide */
+          .barcodeXL { font-family: '${info.name}'; font-size:${info.height*4}px } /* 4 bar is 1px whide */
+        </style>
+      </head>
+      <body>
+        <div style="display:flex;flex-direction:column;align-items:center">
+          <div class="barcodeS">${testtextenc}</div>
+          <div>${testtext}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center">
+          <div class="barcodeM">${testtextenc}</div>
+          <div>${testtext}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center">
+          <div class="barcodeL">${testtextenc}</div>
+          <div>${testtext}</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center">
+          <div class="barcodeXL">${testtextenc}</div>
+          <div>${testtext}</div>
+        </div>
+      </body>
+    </html>`
+    fs.writeFileSync(info.output+"/"+info.name+".html", html);
   }
+
 }
 
 
