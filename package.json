@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/Holger-Will/barcode-font-generator.git"
   },
+  "bin": {
+    "barf": "./cli.js"
+  },
   "keywords": [
     "barcode",
     "font",
