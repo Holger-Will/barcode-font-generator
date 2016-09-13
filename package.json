@@ -1,0 +1,31 @@
+{
+  "name": "barcode-font-generator",
+  "version": "1.0.0",
+  "description": "create your own barcode font with this barcode generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Holger-Will/barcode-font-generator.git"
+  },
+  "keywords": [
+    "barcode",
+    "font",
+    "code128",
+    "code39",
+    "2of5"
+  ],
+  "author": "Holger Will",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Holger-Will/barcode-font-generator/issues"
+  },
+  "homepage": "https://github.com/Holger-Will/barcode-font-generator#readme",
+  "dependencies": {
+    "svg2ttf": "^4.0.2",
+    "ttf2eot": "^2.0.0",
+    "ttf2woff": "^2.0.1"
+  }
+}
