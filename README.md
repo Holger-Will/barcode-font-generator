@@ -3,9 +3,9 @@
 this is a barcode fonts generator. You input the name of the font-family you like, the height of one bar, and the encoding you want.
 Supported encodings are:
 
-* code128
-* code39
-* 2of5
+* [code128](https://github.com/Holger-Will/code-128-font)
+* [code39](https://github.com/Holger-Will/code-39-font)
+* [2of5 interleaved](https://github.com/Holger-Will/2of5-font)
 
 # Installing
 
