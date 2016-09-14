@@ -17,7 +17,7 @@ Install it globally with npm
 
 the command line interface is called barf. use it like this:
 
-   barf -n "Test" -h 35 -c "code39"
+    barf -n "Test" -h 35 -c "code39"
 
 | switch | values | description |
 | --- | --- | --- |
