@@ -6,6 +6,7 @@ Supported encodings are:
 * [code128](https://github.com/Holger-Will/code-128-font)
 * [code39](https://github.com/Holger-Will/code-39-font)
 * [2of5 interleaved](https://github.com/Holger-Will/2of5-font)
+* ean13
 
 # Installing
 
@@ -21,7 +22,7 @@ the command line interface is called barf. use it like this:
 
 | switch | values | description |
 | --- | --- | --- |
-| -c, --code | code128,code39,2of5 | the encoding you want to use |
+| -c, --code | code128,code39,2of5,ean13 | the encoding you want to use |
 | -n, --name | STRING | the name you want give to the font |
 | -h, --height | INTEGER | the height of one bar |
 
