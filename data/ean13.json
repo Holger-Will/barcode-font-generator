@@ -30,6 +30,6 @@
 {"code":27,  "A":"7", "ascii":["R7"], "bars":"1000100" ,"weights":"1312"},
 {"code":28,  "A":"8", "ascii":["R8"], "bars":"1001000" ,"weights":"1213"},
 {"code":29,  "A":"9", "ascii":["R9"], "bars":"1110100" ,"weights":"3112"},
-{"code":30,  "A":"*", "ascii":["*"], "bars":"101" ,"weights":"111"},
-{"code":31,  "A":"**", "ascii":["**"], "bars":"01010" ,"weights":"11111"}
+{"code":30,  "A":"*", "ascii":["*"], "bars":"101" ,"weights":"111","role":"ctrl"},
+{"code":31,  "A":"**", "ascii":["**"], "bars":"01010" ,"weights":"11111","role":"ctrl"}
 ]}

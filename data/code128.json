@@ -103,8 +103,8 @@
 {"code":100, "A":"Code B", "B":"FNC 4", "C": "Code B", "ascii":[205,245], "bars":"10111101110" ,"weights":"114131"},
 {"code":101, "A":"FNC 4", "B":"Code A", "C": "Code A", "ascii":[206,246], "bars":"11101011110" ,"weights":"311141"},
 {"code":102, "A":"FNC 1", "B":"FNC 1", "C": "FNC 1", "ascii":[207,247], "bars":"11110101110" ,"weights":"411131"},
-{"code":103, "A":"Start Code A", "ascii":[208,248], "bars":"000000000011010000100" ,"weights":"901211412"},
-{"code":104, "A":"Start Code B", "ascii":[209,249], "bars":"000000000011010010000" ,"weights":"901211214"},
-{"code":105, "A":"Start Code C", "ascii":[210,250], "bars":"000000000011010011100" ,"weights":"901211232"},
-{"code":106, "A":"Stop (7 bars/spaces)", "ascii":[211,251], "bars":"11000111010110000000000" ,"weights":"2331112901"}
+{"code":103, "A":"Start Code A", "ascii":[208,248], "bars":"000000000011010000100" ,"weights":"901211412" ,"role":"ctrl"},
+{"code":104, "A":"Start Code B", "ascii":[209,249], "bars":"000000000011010010000" ,"weights":"901211214","role":"ctrl"},
+{"code":105, "A":"Start Code C", "ascii":[210,250], "bars":"000000000011010011100" ,"weights":"901211232","role":"ctrl"},
+{"code":106, "A":"Stop (7 bars/spaces)", "ascii":[211,251], "bars":"11000111010110000000000" ,"weights":"2331112901","role":"ctrl"}
 ]}

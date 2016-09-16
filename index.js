@@ -56,14 +56,16 @@ function BarcodeGenerator(){
         var w   = parseInt( item.weights[i] )
         if ( i%2 == first) {
         } else {
-          if(w>0) st += `M ${offset*100}, 0 h ${w*100} V ${info.height*100} h ${-w*100} z `
+          var bl = (info.baseline==undefined) ? 0 : info.baseline
+          if(item.role=="ctrl") bl=0
+          if(w>0) st += `M ${offset*100}, ${bl*100} h ${w*100} V ${info.height*100} h ${-w*100} z `
         }
         offset += w
       }
       var hax = lengthFromWeights(item.weights)
       item.ascii.forEach(function(a,index){
         if((typeof a)!="string"){
-          a="$#"+a+";"
+          a="&#"+a+";"
         }
         svg+=`<glyph unicode = "${a}" horiz-adv-x = "${hax*100}" d = "${st}" />`
       })

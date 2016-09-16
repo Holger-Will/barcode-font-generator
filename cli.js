@@ -33,6 +33,11 @@ for(var i=2;i< process.argv.length;i++){
       info.out=process.argv[i+1]
       i++
     break
+    case "-bl":
+    case "--baseline":
+      info.baseline=process.argv[i+1]
+      i++
+    break
   }
 }
 
