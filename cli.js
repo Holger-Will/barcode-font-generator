@@ -5,7 +5,7 @@ var Generator = require("./")
 var generator=new Generator()
 
 
-var info ={name:'test_font',height:35,code:"code39"}
+var info ={}
 for(var i=2;i< process.argv.length;i++){
   switch(process.argv[i]){
     case "-n":
@@ -25,7 +25,7 @@ for(var i=2;i< process.argv.length;i++){
     break
     case "-i":
     case "--input":
-      info.in=process.argv[i+1]
+      info.input=process.argv[i+1]
       i++
     break
     case "-o":

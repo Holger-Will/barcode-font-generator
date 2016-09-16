@@ -28,6 +28,7 @@ function BarcodeGenerator(){
       console.log("no code or input file specified")
       return
     }
+    console.log(cf)
     var def = require(cf)
     var codes = def.codes
     var svg =
@@ -59,10 +60,12 @@ function BarcodeGenerator(){
         }
         offset += w
       }
-      // the horizontal advance is different for the start and end codes because of the required quite zone
       var hax = lengthFromWeights(item.weights)
       item.ascii.forEach(function(a,index){
-        svg+=`<glyph unicode = "&#${a};" horiz-adv-x = "${hax*100}" d = "${st}" />`
+        if((typeof a)!="string"){
+          a="$#"+a+";"
+        }
+        svg+=`<glyph unicode = "${a}" horiz-adv-x = "${hax*100}" d = "${st}" />`
       })
     })
     svg+=`</font></svg>`
@@ -87,6 +90,10 @@ function BarcodeGenerator(){
     if(info.code == "code128") {
       testtext="Test"
       testtextenc = "ÑTestWÓ"
+    }
+    if(info.code == "ean13") {
+      testtext="8 711253 001202"
+      testtextenc = "*L7G1L1G2G5L3**R0R0R1R2R0R2*"
     }
 
     var html=`<!DOCTYPE html>
