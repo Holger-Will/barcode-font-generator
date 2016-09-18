@@ -6,7 +6,7 @@ Supported encodings are:
 * [code128](https://github.com/Holger-Will/code-128-font)
 * [code39](https://github.com/Holger-Will/code-39-font)
 * [2of5 interleaved](https://github.com/Holger-Will/2of5-font)
-* [ean13](https://github.com/Holger-Will/ean13-font)
+* [ean13](https://github.com/Holger-Will/ean13-font) [live example](https://cdn.rawgit.com/Holger-Will/ean13-font/master/examples/generator.html)
 
 # Installing
 
