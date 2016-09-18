@@ -1,6 +1,6 @@
 {
   "name": "barcode-font-generator",
-  "version": "3.0.1",
+  "version": "4.0.0",
   "description": "create your own barcode font with this barcode generator",
   "main": "index.js",
   "scripts": {
