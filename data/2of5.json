@@ -705,7 +705,8 @@
       "start"
     ],
     "bars": "1010",
-    "weights": "1111"
+    "weights": "1111",
+    "role":"ctrl"
   },
   {
     "ascii": [
@@ -713,7 +714,8 @@
       "end"
     ],
     "bars": "1101",
-    "weights": "211"
+    "weights": "211",
+    "role":"ctrl"
   }
 ]
 }

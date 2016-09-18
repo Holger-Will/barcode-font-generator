@@ -25,5 +25,6 @@ the command line interface is called barf. use it like this:
 | -c, --code | code128,code39,2of5,ean13 | the encoding you want to use |
 | -n, --name | STRING | the name you want give to the font |
 | -h, --height | INTEGER | the height of one bar |
+| -bl, --basline | INTEGER | set how much higher control coder are. used for start mid and end codes of the ean font |
 
 The command creates a folder with the fonts in .svg, .ttf, .woff and .eot format. You will find an example html file using the font in that folder as well.

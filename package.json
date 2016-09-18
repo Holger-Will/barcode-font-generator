@@ -28,6 +28,7 @@
   "homepage": "https://github.com/Holger-Will/barcode-font-generator#readme",
   "dependencies": {
     "svg2ttf": "^4.0.2",
+    "svgpath": "^2.2.0",
     "ttf2eot": "^2.0.0",
     "ttf2woff": "^2.0.1"
   }
