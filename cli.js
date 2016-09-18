@@ -38,6 +38,10 @@ for(var i=2;i< process.argv.length;i++){
       info.baseline=process.argv[i+1]
       i++
     break
+    case "-wn":
+    case "--with-numbers":
+      info.numbers=true
+    break
   }
 }
 

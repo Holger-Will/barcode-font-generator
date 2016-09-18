@@ -18,13 +18,14 @@ Install it globally with npm
 
 the command line interface is called barf. use it like this:
 
-    barf -n "Test" -h 35 -c "code39"
+    barf -n "Super_EAN_Font" -h 60 -c "ean13" -bl 10 --with-numbers
 
 | switch | values | description |
 | --- | --- | --- |
 | -c, --code | code128,code39,2of5,ean13 | the encoding you want to use |
 | -n, --name | STRING | the name you want give to the font |
 | -h, --height | INTEGER | the height of one bar |
-| -bl, --basline | INTEGER | set how much higher control coder are. used for start mid and end codes of the ean font |
+| -bl, --basline | INTEGER | set the height if the numbers at the bottom of the codes. applys only to ean13 and 2of5 fonts so far.|
+| -wn, --with-numbres | | display numbers underneath the bars |
 
 The command creates a folder with the fonts in .svg, .ttf, .woff and .eot format. You will find an example html file using the font in that folder as well.

@@ -72,10 +72,10 @@ var numbers=["M609 353q0-78-18-138t-51-101-82-63-112-21q-62 0-111 21t-83 63-53 1
           if(item.role=="ctrl") bl=bl2
           if(w>0) {
             st += `M ${offset*100}, ${bl*100} h ${w*100} V ${(info.height)*100} h ${-w*100} z `
-            if(info.code=="ean13" && item.role!="ctrl"){
+            if(info.code=="ean13" && item.role!="ctrl" && info.numbers){
               st+=transformNumbers((bl-1)*100,numbers[item.A])
             }
-            if(info.code=="2of5" && item.role!="ctrl"){
+            if(info.code=="2of5" && item.role!="ctrl" && info.numbers){
               var n = item.ascii[0]
               st+=transformNumbers((bl-1)*100,numbers[n[0]],700,0)
               st+=transformNumbers((bl-1)*100,numbers[n[1]],700,700)
