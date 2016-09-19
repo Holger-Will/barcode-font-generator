@@ -94,7 +94,7 @@ var numbers=["M609 353q0-78-18-138t-51-101-82-63-112-21q-62 0-111 21t-83 63-53 1
     })
     if(info.code=="ean13"){
       numbers.forEach(function(item,index){
-        svg+=`<glyph unicode = "${index}" horiz-adv-x = "700" d = "${transformNumbers((info.baseline-1)*100,item)}" />`
+        svg+=`<glyph unicode = "_${index}" horiz-adv-x = "700" d = "${transformNumbers((info.baseline-1)*100,item)}" />`
       })
     }
     svg+=`</font></svg>`
@@ -122,7 +122,7 @@ var numbers=["M609 353q0-78-18-138t-51-101-82-63-112-21q-62 0-111 21t-83 63-53 1
     }
     if(info.code == "ean13") {
       testtext=""
-      testtextenc = "4*L0G5L4L5G0G3**R0R0R8R6R9R4*"
+      testtextenc = "_4*L0G5L4L5G0G3**R0R0R8R6R9R4*"
 
     }
 
