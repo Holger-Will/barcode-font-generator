@@ -38,15 +38,15 @@ var numbers=["M609 353q0-78-18-138t-51-101-82-63-112-21q-62 0-111 21t-83 63-53 1
     var svg =
     `<svg xmlns="http://www.w3.org/2000/svg">
       <font id = "${info.name}"
-            horiz-adv-x   = "${info.height*100}"
+            horiz-adv-x   = "${info.height}"
             vert-origin-x = "0"
             vert-origin-y = "0" >
         <font-face font-family  = "${info.name}"
                    font-weight  = "normal"
-                   units-per-em = "${info.height*100}"
-                   cap-height   = "${info.height*100}"
-                   x-height     = "${info.height*100}"
-                   bbox         = "0 0 ${info.height*100} ${info.height*100}">
+                   units-per-em = "${info.height}"
+                   cap-height   = "${info.height}"
+                   x-height     = "${info.height}"
+                   bbox         = "0 0 ${info.height} ${info.height}">
           <font-face-src>
             <font-face-name name="${info.name}"/>
           </font-face-src>
@@ -71,18 +71,18 @@ var numbers=["M609 353q0-78-18-138t-51-101-82-63-112-21q-62 0-111 21t-83 63-53 1
         } else {
           if(item.role=="ctrl") bl=bl2
           if(w>0) {
-            st += `M ${offset*100}, ${bl*100} h ${w*100} V ${(info.height)*100} h ${-w*100} z `
-            if(info.code=="ean13" && item.role!="ctrl" && info.numbers){
-              st+=transformNumbers((bl-1)*100,numbers[item.A])
-            }
-            if(info.code=="2of5" && item.role!="ctrl" && info.numbers){
-              var n = item.ascii[0]
-              st+=transformNumbers((bl-1)*100,numbers[n[0]],700,0)
-              st+=transformNumbers((bl-1)*100,numbers[n[1]],700,700)
-            }
+            st += `M ${offset*100}, ${bl*100} V ${(info.height)} h ${w*100} V ${bl*100} z `
           }
         }
         offset += w
+      }
+      if(info.code=="ean13" && item.role!="ctrl" && info.numbers){
+        st+=transformNumbers((bl-1)*100,numbers[item.A])
+      }
+      if(info.code=="2of5" && item.role!="ctrl" && info.numbers){
+        var n = item.ascii[0]
+        st+=transformNumbers((bl-1)*100,numbers[n[0]],700,0)
+        st+=transformNumbers((bl-1)*100,numbers[n[1]],700,700)
       }
       var hax = lengthFromWeights(item.weights)
       item.ascii.forEach(function(a,index){
@@ -133,10 +133,10 @@ var numbers=["M609 353q0-78-18-138t-51-101-82-63-112-21q-62 0-111 21t-83 63-53 1
         <title>${info.name} Test Page</title>
         <style>
           @font-face { font-family: '${info.name}'; src: url('./${info.name}.woff'); }
-          .barcodeS { font-family: '${info.name}'; font-size:${info.height}px;margin:5px} /* 1 bar is 1px whide */
-          .barcodeM { font-family: '${info.name}'; font-size:${info.height*2}px;margin:5px } /* 2 bar is 1px whide */
-          .barcodeL { font-family: '${info.name}'; font-size:${info.height*3}px;margin:5px } /* 3 bar is 1px whide */
-          .barcodeXL { font-family: '${info.name}'; font-size:${info.height*4}px;margin:5px } /* 4 bar is 1px whide */
+          .barcodeS { font-family: '${info.name}'; font-size:${info.height/100}px;margin:5px} /* 1 bar is 1px whide */
+          .barcodeM { font-family: '${info.name}'; font-size:${info.height/50}px;margin:5px } /* 2 bar is 1px whide */
+          .barcodeL { font-family: '${info.name}'; font-size:${info.height/33}px;margin:5px } /* 3 bar is 1px whide */
+          .barcodeXL { font-family: '${info.name}'; font-size:${info.height/25}px;margin:5px } /* 4 bar is 1px whide */
         </style>
       </head>
       <body>
@@ -184,7 +184,7 @@ function transformNumbers(nh,p,nw=700,shift = 0){
     .scale(scale)
     .translate(tx+shift,ty+20*scale)
     .rel()
-    .round(2)
+    .round(0)
     .toString();
   return transformed
 }
