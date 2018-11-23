@@ -101,11 +101,11 @@ var numbers=["M609 353q0-78-18-138t-51-101-82-63-112-21q-62 0-111 21t-83 63-53 1
     var ttf = svg2ttf(svg,{})
     if(!fs.existsSync(info.output)) fs.mkdirSync(info.output)
     fs.writeFileSync(info.output+"/"+info.name+".svg", svg);
-    fs.writeFileSync(info.output+"/"+info.name+".ttf", new Buffer(ttf.buffer));
+    fs.writeFileSync(info.output+"/"+info.name+".ttf", Buffer.from(ttf.buffer));
     var woff = ttf2woff(ttf.buffer,{})
-    fs.writeFileSync(info.output+"/"+info.name+".woff", new Buffer(woff.buffer));
+    fs.writeFileSync(info.output+"/"+info.name+".woff", Buffer.from(woff.buffer));
     var woff = ttf2eot(ttf.buffer,{})
-    fs.writeFileSync(info.output+"/"+info.name+".eot", new Buffer(woff.buffer));
+    fs.writeFileSync(info.output+"/"+info.name+".eot", Buffer.from(woff.buffer));
     var testtext=""
     var testtextenc=""
     if(info.code == "code39") {
